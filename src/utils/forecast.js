@@ -10,7 +10,8 @@ const forecast = (latitude, longitutde, callback) => {
         } else {
             callback(undefined, `${body.daily.data[0].summary} la température est de ${body.currently.temperature} °. 
             Il y a ${body.currently.precipProbability} % de chance d'avoir de la pluie. 
-            La vitesse du vent est de ${body.currently.windSpeed} Km/h`)
+            La température la plus haute est de : ${body.daily.data[0].temperatureHigh} ° , 
+            la plus basse température est de :  ${body.daily.data[0].temperatureLow} °`)
         }
     })
 }
