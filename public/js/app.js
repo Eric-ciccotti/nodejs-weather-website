@@ -2,10 +2,11 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const mainContent = document.querySelector('.main-content')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    
+
     const location = search.value
 
     messageOne.textContent = 'Loading...'
@@ -19,19 +20,8 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.location
                 messageTwo.textContent = data.forecast
             }
-            // const body = document.querySelector('body')
-            // const para = document.createElement('p')
-            // const forecast = document.createTextNode(data.location + data.forecast)
-            // para.appendChild(forecast)
-            // body.appendChild(para)
         })
     })
-
-
-
-
-
-
 })
 
 // console.log('Client side javascript side is loaded')
